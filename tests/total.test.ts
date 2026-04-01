@@ -8,7 +8,7 @@ describe("total", () => {
     ];
 
     // проверяем сумму корзины
-    // раньше тут по ошибке ожидали 180, потом поправили на 190
+    // раньше тут по ошибке ожидал 180, потом поправил на 190
     const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
     expect(total).toBe(190);
   });

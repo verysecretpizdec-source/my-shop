@@ -92,9 +92,9 @@ export function ShopClient() {
       <section className="space-y-6">
         <header className="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight">My Shop</h1>
+            <h1 className="text-3xl font-bold tracking-tight">Daily Store</h1>
             <p className="text-sm text-zinc-500 dark:text-zinc-400">
-              Modern storefront built with Next.js 15 and App Router.
+             Simple online store built with Next.js 15
             </p>
           </div>
           <ThemeToggle />
@@ -147,11 +147,11 @@ export function ShopClient() {
 
         {isLoading ? (
           <div className="rounded-2xl border border-zinc-200 bg-white p-8 text-center text-zinc-500 dark:border-zinc-700 dark:bg-[#1f1f1f] dark:text-zinc-300">
-            Загрузка товаров...
+            Loading products...
           </div>
         ) : filteredProducts.length === 0 ? (
           <div className="rounded-2xl border border-zinc-200 bg-white p-8 text-center text-zinc-500 dark:border-zinc-700 dark:bg-[#1f1f1f] dark:text-zinc-300">
-            Товары не найдены. Попробуйте изменить фильтры.
+            No products found. Try changing your filters.
           </div>
         ) : (
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
@@ -188,37 +188,62 @@ export function ShopClient() {
             items.map((item) => (
               <div
                 key={item.id}
-                className="rounded-xl border border-zinc-200 p-3 dark:border-zinc-800"
+                className="rounded-2xl border border-zinc-200 bg-zinc-100 p-4 shadow-sm 
+                           dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100 flex gap-4"
               >
-                <div className="flex items-center justify-between">
-                  <p className="text-sm font-medium">{item.name}</p>
-                  <button
-                    onClick={() => removeItem(item.id)}
-                    type="button"
-                    className="text-xs text-red-600 hover:underline"
-                  >
-                    Remove
-                  </button>
-                </div>
-                <p className="text-xs text-zinc-500 dark:text-zinc-400">
-                  {formatPrice(item.price)}
-                </p>
-                <div className="mt-2 flex items-center gap-2">
-                  <button
-                    onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                    type="button"
-                    className="h-7 w-7 rounded-md border border-zinc-300 dark:border-zinc-700"
-                  >
-                    -
-                  </button>
-                  <span className="w-6 text-center text-sm">{item.quantity}</span>
-                  <button
-                    onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                    type="button"
-                    className="h-7 w-7 rounded-md border border-zinc-300 dark:border-zinc-700"
-                  >
-                    +
-                  </button>
+                {/* Маленькая картинка товара */}
+                <div className="w-14 h-14 flex-shrink-0 overflow-hidden rounded-xl bg-zinc-200 dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600">
+                 <img
+                 src={item.image}
+                 alt={item.name}
+                 className="w-full h-full object-cover"
+                 style={{ objectPosition: '50% 50%' }} 
+                 onError={(e) => {
+                e.currentTarget.src = "https://placehold.co/56x56/27272a/9ca3af?text=×";
+                }}
+               />
+              </div>
+            
+                {/* Информация о товаре */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1 pr-2">
+                      <p className="text-sm font-medium leading-tight line-clamp-2">
+                        {item.name}
+                      </p>
+                      <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">
+                        ${item.price}
+                      </p>
+                    </div>
+            
+                    <button
+                      onClick={() => removeItem(item.id)}
+                      type="button"
+                      className="rounded-lg bg-red-500 px-3 py-1 text-xs font-medium text-white 
+                                 hover:bg-red-600 transition-colors flex-shrink-0"
+                    >
+                      X
+                    </button>
+                  </div>
+            
+                  
+                  <div className="mt-4 flex items-center gap-3">
+                    <button
+                      onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                      className="h-8 w-8 rounded-lg border border-zinc-300 dark:border-zinc-600 
+                                 flex items-center justify-center text-lg hover:bg-zinc-100 dark:hover:bg-zinc-700"
+                    >
+                      −
+                    </button>
+                    <span className="w-6 text-center font-medium text-base">{item.quantity}</span>
+                    <button
+                      onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                      className="h-8 w-8 rounded-lg border border-zinc-300 dark:border-zinc-600 
+                                 flex items-center justify-center text-lg hover:bg-zinc-100 dark:hover:bg-zinc-700"
+                    >
+                      +
+                    </button>
+                  </div>
                 </div>
               </div>
             ))

@@ -26,7 +26,7 @@ export const PRODUCTS: Product[] = [
     category: "electronics",
     description: "Mechanical keyboard with tactile switches.",
     image:
-      "https://images.unsplash.com/photo-1587829741301-dc798e83add3?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1595044426077-d36d9236d54a?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 4,
@@ -35,16 +35,16 @@ export const PRODUCTS: Product[] = [
     category: "clothing",
     description: "Lightweight sneakers for daily running.",
     image:
-      "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 5,
-    name: "Portable SSD 1TB",
+    name: "HP Color Laser",
     price: 149,
     category: "electronics",
-    description: "Fast portable SSD with USB-C connection.",
+    description: "Compact and efficient laser printer perfect for home and small office use.",
     image:
-      "https://images.unsplash.com/photo-1588872651728-2f5f8f3f2f2f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 6,
@@ -71,7 +71,7 @@ export const PRODUCTS: Product[] = [
     category: "books",
     description: "Classic book about software development best practices.",
     image:
-      "https://images.unsplash.com/photo-1544947958-8b1f8f0f8f8f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 9,
@@ -80,16 +80,16 @@ export const PRODUCTS: Product[] = [
     category: "books",
     description: "Must-read book about writing clean and maintainable code.",
     image:
-      "https://images.unsplash.com/photo-1544947958-8b1f8f0f8f8f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1627398242454-45a1465c2479?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 10,
-    name: "AirPods Pro 2",
+    name: "Sony Headphones",
     price: 249,
     category: "electronics",
     description: "Premium wireless earbuds with noise cancellation.",
     image:
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 11,
@@ -98,16 +98,16 @@ export const PRODUCTS: Product[] = [
     category: "clothing",
     description: "Timeless denim jacket for casual look.",
     image:
-      "https://images.unsplash.com/photo-1544967273-6c5f1c5f0f1f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1505022610485-0249ba5b3675?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 12,
-    name: "Designing Data-Intensive Applications",
+    name: "How innovations works",
     price: 59,
     category: "books",
-    description: "Deep technical book about scalable systems and databases.",
+    description: "Practical guide to understanding how breakthrough innovations actually happen.",
     image:
-      "https://images.unsplash.com/photo-1544947958-8b1f8f0f8f8f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=800&q=80",
   },
 ];
 

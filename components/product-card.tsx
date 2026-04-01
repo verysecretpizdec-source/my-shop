@@ -26,7 +26,7 @@ export function ProductCard({ product, index, isAdding, onAdd }: ProductCardProp
         </div>
       ) : (
         <>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
+          {}
           <img
             src={product.image}
             alt={product.name}
@@ -38,23 +38,33 @@ export function ProductCard({ product, index, isAdding, onAdd }: ProductCardProp
         </>
       )}
       <div className="flex flex-1 flex-col gap-3 p-4">
-        <div className="flex items-start justify-between gap-2">
-          <h3 className="line-clamp-2 min-h-14 font-semibold">{product.name}</h3>
-          <span className="text-sm font-medium text-zinc-600 dark:text-zinc-300">
-            {formatPrice(product.price)}
-          </span>
-        </div>
-        <p className="line-clamp-2 min-h-12 text-sm text-zinc-500 dark:text-zinc-400">
-          {product.description}
-        </p>
-        <button
-          onClick={() => onAdd(product.id)}
-          className="mt-auto w-full rounded-xl bg-zinc-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-zinc-700 disabled:opacity-50 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
-          disabled={isAdding}
-        >
-          Add to cart
-        </button>
-      </div>
+  <div className="flex items-start justify-between gap-2">
+    <h3 className="line-clamp-2 font-semibold text-base leading-tight">
+      {product.name}
+    </h3>
+    <span className="text-sm font-medium text-zinc-600 dark:text-zinc-300 whitespace-nowrap">
+      {formatPrice(product.price)}
+    </span>
+  </div>
+
+  {}
+  <p className="line-clamp-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300 flex-1">
+    {product.description}
+  </p>
+
+  {}
+  <div className="mt-auto pt-2">
+    <button
+      onClick={() => onAdd(product.id)}
+      className="mt-auto w-full rounded-xl bg-zinc-900 px-4 py-3 text-sm font-medium text-white 
+                 transition hover:bg-zinc-800 disabled:opacity-50 
+                 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
+      disabled={isAdding}
+    >
+      Add to cart
+    </button>
+  </div>
+   </div>
     </article>
   );
 }
