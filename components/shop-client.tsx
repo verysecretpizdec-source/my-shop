@@ -262,6 +262,7 @@ export function ShopClient() {
             event.preventDefault();
             checkoutMutation.mutate({ name, address, phone, items });
           }}
+          noValidate
         >
           <h3 className="text-sm font-semibold">Checkout</h3>
           <input
@@ -269,21 +270,21 @@ export function ShopClient() {
             onChange={(event) => setName(event.target.value)}
             placeholder="Name"
             className="w-full rounded-xl border border-zinc-300 px-3 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-950"
-            required
+
           />
           <input
             value={address}
             onChange={(event) => setAddress(event.target.value)}
             placeholder="Address"
             className="w-full rounded-xl border border-zinc-300 px-3 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-950"
-            required
+            
           />
           <input
             value={phone}
             onChange={(event) => setPhone(event.target.value)}
             placeholder="Phone"
             className="w-full rounded-xl border border-zinc-300 px-3 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-950"
-            required
+            
           />
           <button
             type="submit"
