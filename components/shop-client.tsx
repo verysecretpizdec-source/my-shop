@@ -219,10 +219,9 @@ export function ShopClient() {
                     <button
                       onClick={() => removeItem(item.id)}
                       type="button"
-                      className="rounded-lg bg-red-500 px-3 py-1 text-xs font-medium text-white 
-                                 hover:bg-red-600 transition-colors flex-shrink-0"
+                      className="h-5 w-5 flex items-center justify-center rounded-full bg-red-500/90 hover:bg-red-600 transition-colors text-white text-[10px]"
                     >
-                      X
+                      x
                     </button>
                   </div>
             
